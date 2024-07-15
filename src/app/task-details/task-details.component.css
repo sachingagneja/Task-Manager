@@ -1,0 +1,59 @@
+.task-detail {
+  display: flex;
+  background: linear-gradient(135deg, #f0f4f8, #ddebf7); /* Updated background gradient */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.task-detail .column {
+  flex: 1;
+  padding: 0 20px; /* Adjust column padding */
+}
+
+.task-detail h2,
+.task-detail h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Space between headers and content */
+  color: #333; /* Darkened header text color */
+}
+
+.task-detail h2 .detail-icon,
+.task-detail h3 .history-icon {
+  margin-left: 10px;
+  color: #5cb85c; /* Green icon color */
+  font-size: 1.8em; /* Increased icon size */
+}
+
+.task-detail p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  color: #666; /* Darkened text color */
+  font-size: 1.1em; /* Increased text size */
+}
+
+.task-detail p i {
+  margin-left: 10px;
+  color: #5cb85c; /* Green icon color */
+}
+
+.task-detail .close-btn {
+  background: #d9534f; /* Darker red background color */
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Increased padding */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em; /* Increased text size */
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Space above the close button */
+}
+
+.task-detail .close-btn .close-icon {
+  margin-left: 10px;
+}

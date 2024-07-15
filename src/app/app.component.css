@@ -1,0 +1,116 @@
+.task-management-app {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Dull white or beige background */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: #3f3f3f; /* Dark background color */
+  color: #ffffff; /* White text color */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+  font-size: 32px; /* Larger font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.export-btn {
+  background: #bd3009; /* Green button background */
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Larger padding */
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-left: 1000px;
+}
+
+
+.export-btn:hover {
+  background: #bd3009; /* Darker green on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.export-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.app-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden; /* Prevents overflow from causing scrollbars */
+}
+
+.task-form-section {
+  flex: 1; /* Take up remaining space */
+  background: #f0f0f0; /* Adjust background color */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enable scrolling within section if needed */
+  overflow: hidden;
+}
+
+.task-list-section {
+  flex: 1; /* Adjust width as per your design */
+  min-width: 250px; /* Ensure a minimum width to prevent content from squishing */
+  background: #f0f0f0; /* Adjust background color */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enable scrolling within section if needed */
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: monospace;
+  color: #177ee4;
+  font-size: 1.8rem;
+  position: relative;
+  font-weight: bold;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #2196f3;
+}
+
+.section-content {
+  padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    flex-direction: column;
+  }
+
+  .task-list-section {
+    width: 100%; /* Full width on smaller screens */
+    min-width: auto;
+  }
+}

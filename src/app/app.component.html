@@ -1,0 +1,27 @@
+<div class="task-management-app">
+  <header class="app-header">
+    <h1 class="app-title">{{ title }}</h1>
+    <button class="export-btn" (click)="exportTasks()">
+      <i class="fas fa-file-export"></i>
+      <span>Export</span>
+    </button>
+  </header>
+  <section class="app-main">
+    <div class="task-form-section">
+      <div class="section-header">
+        <h2 class="section-title">Task Form</h2>
+      </div>
+      <div class="section-content">
+        <app-task-form [taskToEdit]="selectedTask" (taskUpdated)="onTaskUpdated()"></app-task-form>
+      </div>
+    </div>
+    <div class="task-list-section">
+      <div class="section-header">
+        <h2 class="section-title">Task List</h2>
+      </div>
+      <div class="section-content">
+        <app-task-list (editTask)="onEditTask($event)"></app-task-list>
+      </div>
+    </div>
+  </section>
+</div>

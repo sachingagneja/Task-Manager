@@ -1,0 +1,24 @@
+<ul class="task-list">
+  <h2>Task List</h2>
+  <li *ngFor="let task of tasks">
+    <div>
+      <span class="status-indicator" [ngClass]="task.status"></span>
+      <span class="task-title">{{ task.title }}</span> - 
+      <span [ngClass]="{'high-priority': task.priority === 'high',
+                       'medium-priority': task.priority === 'medium',
+                       'low-priority': task.priority === 'low'}">{{ task.priority.charAt(0).toUpperCase() + task.priority.slice(1) }}</span> - 
+      {{ task.status }}
+    </div>
+    <div class="button-group">
+      <button (click)="onEditTask(task)">
+        <i class="fa fa-edit edit-icon"></i>
+      </button>
+      <button (click)="onDeleteTask(task.id)">
+        <i class="fa fa-trash delete-icon"></i>
+      </button>
+      <button (click)="onViewTask(task)">
+        <i class="fa fa-eye view-icon"></i>
+      </button>
+    </div>
+  </li>
+</ul>
